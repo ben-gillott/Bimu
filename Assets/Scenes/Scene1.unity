@@ -190,8 +190,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 155036551}
-  m_LocalRotation: {x: 0.10593092, y: 0.18385157, z: -0.01993354, w: 0.9770261}
-  m_LocalPosition: {x: 3.0261414, y: 1.7078661, z: -15.418208}
+  m_LocalRotation: {x: 0.047981277, y: 0.0029961015, z: -0.00014397407, w: 0.9988437}
+  m_LocalPosition: {x: -0.04258978, y: 1.6836257, z: -7.0990877}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -363,7 +363,7 @@ GameObject:
   - component: {fileID: 1265549160}
   - component: {fileID: 1265549159}
   - component: {fileID: 1265549158}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -515,10 +515,10 @@ MonoBehaviour:
   groundCheck: {fileID: 738069345}
   groundMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   groundDistance: 0.4
   speed: 12
-  gravity: -9.81
+  gravity: -19.62
   jumpHeight: 3
 --- !u!65 &1462709437
 BoxCollider:

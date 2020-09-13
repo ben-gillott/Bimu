@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("Object References")]
     public CharacterController controller;
-
-
     public Transform groundCheck;
     public LayerMask groundMask;
+
+    [Space]
+    [Header("Variables")]
     public float groundDistance = 0.4f;
-    
     public float speed = 12f;
-    public float gravity = -9.81f;
-    public float jumpHeight = 3f;
-    Vector3 velocity;
-    bool isGrounded;
+    public float gravity = -18.81f;
+    public float jumpHeight = 2f;
+    private Vector3 velocity;
+    private bool isGrounded;
 
 
 
@@ -29,13 +30,13 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //Get floor movement
-        float x = Input.GetAxis("Horizontal"); //Also works with controllers!
-        // float z = Input.GetAxis("Vertical"); //TODO: do we need vertical movement
-
-        Vector3 move = transform.right * x;// + transform.forward * z;
+        float x = Input.GetAxis("Horizontal");
+        //Apply the movement
+        Vector3 move = transform.right * x;
         controller.Move(move * speed * Time.deltaTime);
 
-        //Get jump
+
+        //Get jump input
         if(Input.GetButtonDown("Jump") && isGrounded){
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
